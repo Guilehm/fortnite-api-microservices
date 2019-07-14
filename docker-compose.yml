@@ -1,0 +1,42 @@
+version: '3.3'
+services:
+  
+  divinity:
+    network_mode: bridge
+    image: node:8.11.4-alpine
+    build:
+      context: ./projects/divinity/
+    command: npm start
+    container_name: divinity
+    expose:
+      - 80
+    ports:
+      - 3000:80
+    volumes:
+      - ./projects/divinity:/divinity
+      - /divinity/node_modules
+    environment:
+      PORT: 80
+      HOST: 0.0.0.0
+    env_file:
+      - .env
+  
+  horizon:
+    network_mode: bridge
+    image: node:8.11.4-alpine
+    build:
+      context: ./projects/horizon/
+    command: npm start
+    container_name: horizon
+    expose:
+      - 80
+    ports:
+      - 3010:80
+    volumes:
+      - ./projects/horizon:/horizon
+      - /horizon/node_modules
+    environment:
+      PORT: 80
+      HOST: 0.0.0.0
+    env_file:
+      - .env
