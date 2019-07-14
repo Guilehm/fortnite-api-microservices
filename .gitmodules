@@ -1,0 +1,6 @@
+[submodule "horizon"]
+	path = horizon
+	url = git@github.com:Guilehm/horizon.git
+[submodule "divinity"]
+	path = divinity
+	url = git@github.com:Guilehm/divinity.git
