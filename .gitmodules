@@ -4,3 +4,6 @@
 [submodule "projects/horizon"]
 	path = projects/horizon
 	url = git@github.com:Guilehm/horizon.git
+[submodule "projects/bloodborne"]
+	path = projects/bloodborne
+	url = git@github.com:Guilehm/bloodborne.git
