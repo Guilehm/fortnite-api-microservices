@@ -40,3 +40,23 @@ services:
       HOST: 0.0.0.0
     env_file:
       - .env
+  
+  bloodborne:
+    network_mode: bridge
+    image: node:8.11.4-alpine
+    build:
+      context: ./projects/bloodborne/
+    command: npm start
+    container_name: bloodborne
+    expose:
+      - 80
+    ports:
+      - 3020:80
+    volumes:
+      - ./projects/bloodborne:/bloodborne
+      - /bloodborne/node_modules
+    environment:
+      PORT: 80
+      HOST: 0.0.0.0
+    env_file:
+      - .env
