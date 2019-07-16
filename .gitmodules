@@ -1,9 +1,0 @@
-[submodule "projects/divinity"]
-	path = projects/divinity
-	url = git@github.com:Guilehm/divinity.git
-[submodule "projects/horizon"]
-	path = projects/horizon
-	url = git@github.com:Guilehm/horizon.git
-[submodule "projects/bloodborne"]
-	path = projects/bloodborne
-	url = git@github.com:Guilehm/bloodborne.git
