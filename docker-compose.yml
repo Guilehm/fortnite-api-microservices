@@ -3,9 +3,8 @@ services:
   
   divinity:
     network_mode: bridge
-    image: node:8.11.4-alpine
-    build:
-      context: ./projects/divinity/
+    image: divinity:dev
+    build: ./projects/divinity/
     command: npm start
     container_name: divinity
     expose:
@@ -17,15 +16,13 @@ services:
       - /divinity/node_modules
     environment:
       PORT: 80
-      HOST: 0.0.0.0
     env_file:
       - .env
   
   horizon:
     network_mode: bridge
-    image: node:8.11.4-alpine
-    build:
-      context: ./projects/horizon/
+    image: horizon:dev
+    build: ./projects/horizon/
     command: npm start
     container_name: horizon
     expose:
@@ -37,15 +34,13 @@ services:
       - /horizon/node_modules
     environment:
       PORT: 80
-      HOST: 0.0.0.0
     env_file:
       - .env
   
   bloodborne:
     network_mode: bridge
-    image: node:8.11.4-alpine
-    build:
-      context: ./projects/bloodborne/
+    image: bloodborne:dev
+    build: ./projects/bloodborne/
     command: npm start
     container_name: bloodborne
     expose:
@@ -57,6 +52,5 @@ services:
       - /bloodborne/node_modules
     environment:
       PORT: 80
-      HOST: 0.0.0.0
     env_file:
       - .env
