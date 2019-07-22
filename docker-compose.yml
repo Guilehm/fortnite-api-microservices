@@ -18,21 +18,25 @@ services:
       PORT: 80
     env_file:
       - .env
-  
+
   horizon:
     network_mode: bridge
     image: horizon:dev
     build: ./projects/horizon/
     command: npm start
     container_name: horizon
-    expose:
+    expose: 
       - 80
     ports:
       - 3010:80
     volumes:
       - ./projects/horizon:/horizon
       - /horizon/node_modules
+    links:
+      - mongo:mongo'
     environment:
+      NODE_ENV: 'developmentDocker'
+      MONGODB_URI: 'mongodb://mongo:27017/local_horizon'
       PORT: 80
     env_file:
       - .env
