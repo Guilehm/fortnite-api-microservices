@@ -33,7 +33,7 @@ services:
       - ./projects/horizon:/horizon
       - /horizon/node_modules
     links:
-      - mongo:mongo'
+      - mongo:mongo
     environment:
       NODE_ENV: 'developmentDocker'
       MONGODB_URI: 'mongodb://mongo:27017/local_horizon'
