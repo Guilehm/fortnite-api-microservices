@@ -54,3 +54,14 @@ services:
       PORT: 80
     env_file:
       - .env
+
+
+  mongo:
+    network_mode: bridge
+    container_name: mongo
+    image: "mongo:3.4-jessie"
+    hostname: fortnite-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb:/data/db
