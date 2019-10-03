@@ -10,3 +10,6 @@
 [submodule "projects/the-witcher"]
 	path = projects/the-witcher
 	url = git@github.com:Guilehm/the-witcher.git
+[submodule "dark-souls"]
+	path = dark-souls
+	url = git@github.com:Guilehm/dark-souls.git
