@@ -7,3 +7,6 @@
 [submodule "projects/bloodborne"]
 	path = projects/bloodborne
 	url = git@github.com:Guilehm/bloodborne.git
+[submodule "projects/the-witcher"]
+	path = projects/the-witcher
+	url = git@github.com:Guilehm/the-witcher.git
